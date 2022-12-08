@@ -10,12 +10,13 @@ const Home: NextPage = () => {
         <meta name="description" content="content" />
         <link rel="icon" href="/naranjo-express-transparent.png" />
       </Head>
+      <div className="flex-col">
+        <Navbar />
+        <h1>
+          ¡Arreglamos cualquier cosa!
+        </h1>
+      </div>
 
-      <Navbar />
-
-      <main className="bg-gray-100">
-
-      </main>
     </>
   );
 };
