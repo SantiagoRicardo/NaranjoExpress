@@ -29,7 +29,9 @@ const Navbar: FC = () => {
           <ul className="flex list-none flex-col lg:ml-auto lg:flex-row">
             {PAGES.map((page) => (
               <li className="ml-2 text-xl text-black" key={page.name}>
-                <Link href={page.href}>{page.name}</Link>
+                <Link href={page.href}>
+                  {page.name}
+                </Link>
               </li>
             ))}
           </ul>

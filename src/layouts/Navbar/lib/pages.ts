@@ -9,8 +9,8 @@ const PAGES: Page[] = [
     href: "/"
   },
   {
-    name: "Estudios",
-    href: "/estudios"
+    name: "Servicios",
+    href: "/servicios"
   },
   {
     name: "Experiencia",
