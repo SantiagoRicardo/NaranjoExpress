@@ -13,6 +13,8 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
-  pageExtensions: ["page.tsx", "page.ts"]
+  experimental: {
+    appDir: true,
+  },
 };
 export default config;
