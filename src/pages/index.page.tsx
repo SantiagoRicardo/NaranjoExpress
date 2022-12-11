@@ -16,37 +16,37 @@ const Home: NextPage = () => {
       id: '1',
       title: 'Mantenimiento del hogar',
       description: 'Cuida tu domicilio con nuestro servicio de mantenimiento y conservación del hogar, plomeria, herreria, pintura y mucho más!.',
-      svg: 'HiWrenchScrewdriver',
+      svg: '<HiWrenchScrewdriver />',
     },
     {
       id: '2',
       title: 'Pulitura de pisos',
       description: 'En granito y marmol.',
-      svg: 'HiWrenchScrewdriver',
+      svg: '<HiWrenchScrewdriver />',
     },
     {
       id: '3',
       title: 'Remodelacion de infraestructura',
       description: 'Obra civil y obra blanca',
-      svg: 'HiWrenchScrewdriver',
+      svg: '<HiWrenchScrewdriver />',
     },
     {
       id: '4',
       title: 'Suministro electrico',
       description: 'Sistemas integrados con mecanismos de control para Generar, transportar y distribuir energía.',
-      svg: 'HiWrenchScrewdriver',
+      svg: '<HiWrenchScrewdriver />',
     },
     {
       id: '5',
       title: 'Servicio de limpieza',
       description: 'Lavado y aspirado de muebles, alfombras, eliminación de olores, abrillantado de pisos.',
-      svg: 'HiWrenchScrewdriver',
+      svg: '<HiWrenchScrewdriver />',
     },
     {
       id: '6',
       title: 'Carpintería',
       description: 'Puertas, ventanas, parquets, tarimas, revestimientos, cocinas, armarios, y muebles a medida para baños, cocinas, dormitorios y salón, entre otros.',
-      svg: 'HiWrenchScrewdriver',
+      svg: '<HiWrenchScrewdriver />',
     },
   ];
   return (
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
           <div className="flex flex-wrap justify-center">
             {CARDS.map((cards) => (
               <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4 bg-blue-600 shadow-md rounded-3xl p-10 m-5">
-                <HiWrenchScrewdriver />
+                
                 <h1 className="font-semibold text-amber-400 text-3xl mb-5" key={cards.title}>
                   {cards.title}
                 </h1>
