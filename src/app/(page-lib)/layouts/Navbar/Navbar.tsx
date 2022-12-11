@@ -3,7 +3,7 @@
 import { type FC, useState } from "react";
 import Link from "next/link";
 import cs from "@/utils/cs";
-import { PAGES } from "@/layouts/Navbar/lib";
+import { PAGES } from "./lib";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 
 const Navbar: FC = () => {
