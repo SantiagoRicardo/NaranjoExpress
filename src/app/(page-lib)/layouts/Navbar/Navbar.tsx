@@ -10,7 +10,7 @@ const Navbar: FC = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-10 mb-3 w-full items-center justify-between px-2 py-3">
+    <nav className="sticky top-0 z-10 mb-3 w-full items-center justify-between px-2 py-3 bg-white">
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4">
         <div className="relative flex w-full justify-between lg:static lg:block lg:w-auto lg:justify-start">
           <Link
