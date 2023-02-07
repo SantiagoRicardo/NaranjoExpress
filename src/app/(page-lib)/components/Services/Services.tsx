@@ -62,10 +62,10 @@ const CARDS: Card[] = [
 ];
 
 const Services: FC = () => (
-  <section className="bg-white py-24 sm:py-32 lg:py-40">
+  <section className="bg-white py-24 sm:py-32 lg:py-20">
     <div className="mx-auto max-w-7xl px-6 lg:px-8">
       <div className="sm:text-center">
-        <h2 className="text-lg font-semibold leading-8 text-blue-600">¿Como funciona?</h2>
+        <h2 className="text-lg font-semibold leading-8 text-[#02044a]">¿Como funciona?</h2>
         <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           ¡Servicio a domicilio sin problemas, Todo lo que necesites!
         </p>
@@ -81,7 +81,7 @@ const Services: FC = () => (
               key={card.title}
               className="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500 text-white sm:shrink-0">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#02044a] text-white sm:shrink-0">
                 <card.svg className="h-8 w-8" aria-hidden="true" />
               </div>
               <div className="sm:min-w-0 sm:flex-1">
