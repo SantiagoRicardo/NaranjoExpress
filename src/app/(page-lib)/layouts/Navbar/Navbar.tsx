@@ -5,6 +5,7 @@ import Link from "next/link";
 import cs from "@/utils/cs";
 import { PAGES } from "./lib";
 import { Bars3Icon } from "@heroicons/react/24/solid";
+import dynamic from "next/dynamic";
 
 const Navbar: FC = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -59,4 +60,4 @@ const Navbar: FC = () => {
   );
 };
 
-export default Navbar;
+export default dynamic(() => Promise.resolve(Navbar), { ssr: false });

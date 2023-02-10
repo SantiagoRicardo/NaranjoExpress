@@ -1,5 +1,5 @@
 import { type NextPage } from "next";
-import { Footer, Form, Hero, Services, Us } from "@/app/(page-lib)/components";
+import { Form, Hero, Services, Us } from "@/app/(page-lib)/components";
 
 const Home: NextPage = () => (
   <>
@@ -7,7 +7,6 @@ const Home: NextPage = () => (
     <Us />
     <Services />
     <Form />
-    <Footer />
   </>
 );
 
