@@ -9,7 +9,7 @@ type Props = {
 
 const RootLayout: FC<Props> = ({ children }) => {
   return (
-    <html>
+    <html lang="es">
       <head>
         <title>Naranjo Express</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

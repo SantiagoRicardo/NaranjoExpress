@@ -1,7 +1,6 @@
-import { type NextPage } from "next";
 import { Form, Hero, Services, Us } from "@/app/(page-lib)/components";
 
-const Home: NextPage = () => (
+const Home = () => (
   <>
     <Hero />
     <Us />
