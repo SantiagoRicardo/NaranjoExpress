@@ -1,5 +1,3 @@
-"use client";
-
 import { type FC } from "react";
 import { FaInstagram, FaFacebookF, FaWhatsapp, FaGithub } from "react-icons/fa";
 
@@ -70,7 +68,7 @@ const Footer: FC = () => (
                     type="button"
                     className="mb-2 rounded-xl bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 p-3 text-white shadow-md transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
                   >
-                    <FaInstagram className="h-5 w-5"/>
+                    <FaInstagram className="h-5 w-5" />
                   </button>
                 </a>
               </div>
@@ -81,7 +79,7 @@ const Footer: FC = () => (
                     type="button"
                     className="mb-2 rounded-xl bg-blue-600 p-3 text-white shadow-md transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
                   >
-                    <FaFacebookF className="h-5 w-5"/>
+                    <FaFacebookF className="h-5 w-5" />
                   </button>
                 </a>
               </div>
@@ -96,22 +94,18 @@ const Footer: FC = () => (
                     type="button"
                     className="mb-2 rounded-xl bg-[#25D366] p-3 text-white shadow-md transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
                   >
-                    <FaWhatsapp className="h-5 w-5"/>
+                    <FaWhatsapp className="h-5 w-5" />
                   </button>
                 </a>
               </div>
 
               <div className="mr-5 justify-center">
-                <a
-                  href="https://github.com/SantiagoRicardo"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href="https://github.com/SantiagoRicardo" target="_blank" rel="noreferrer">
                   <button
                     type="button"
                     className="mb-2 rounded-xl bg-white p-3 text-black shadow-md transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
                   >
-                    <FaGithub className="h-5 w-5"/>
+                    <FaGithub className="h-5 w-5" />
                   </button>
                 </a>
               </div>
@@ -135,19 +129,19 @@ const Footer: FC = () => (
             <h1 className="text-lg font-bold text-white">Enlaces utiles</h1>
             <div className="mt-3 text-base text-slate-500">
               <ol>
-                <a href="">
+                <a href="@/pages/(page-lib)/layouts/Footer/index">
                   <li className="mb-4 hover:text-white">Inicio</li>
                 </a>
-                <a href="">
+                <a href="@/pages/(page-lib)/layouts/Footer/index">
                   <li className="mb-4 hover:text-white">Sobre nosotros</li>
                 </a>
-                <a href="">
+                <a href="@/pages/(page-lib)/layouts/Footer/index">
                   <li className="mb-4 hover:text-white">Servicios</li>
                 </a>
-                <a href="">
+                <a href="@/pages/(page-lib)/layouts/Footer/index">
                   <li className="mb-4 hover:text-white">Portafolio</li>
                 </a>
-                <a href="">
+                <a href="@/pages/(page-lib)/layouts/Footer/index">
                   <li className="mb-4 hover:text-white">Contáctanos</li>
                 </a>
               </ol>

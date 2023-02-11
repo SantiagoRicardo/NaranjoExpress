@@ -1,18 +1,15 @@
-"use client";
-
-import type { ComponentProps } from "react";
 import { type FC } from "react";
 import { MdAutoAwesome } from "react-icons/md";
-import { 
-  BoltIcon, 
+import {
+  BoltIcon,
   BuildingOffice2Icon,
   HomeModernIcon,
-  TrashIcon,  
-  WrenchScrewdriverIcon 
+  TrashIcon,
+  WrenchScrewdriverIcon,
 } from "@heroicons/react/24/solid";
 
 type Card = {
-  svg: (props: ComponentProps<"svg"> & { title?: string; titleId?: string }) => JSX.Element;
+  svg: any;
   description: string;
   id: string;
   title: string;

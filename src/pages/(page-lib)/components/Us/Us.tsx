@@ -1,6 +1,3 @@
-"use client";
-
-import type { ComponentProps } from "react";
 import { type FC } from "react";
 import Image from "next/image";
 import {
@@ -10,8 +7,9 @@ import {
   UserGroupIcon,
   UsersIcon,
 } from "@heroicons/react/24/solid";
+
 type Picture = {
-  svg: (props: ComponentProps<"svg"> & { title?: string; titleId?: string }) => JSX.Element;
+  svg: any;
   projects: string;
   name: string;
   src1: string;
@@ -163,8 +161,10 @@ const Nosotros: FC = () => (
           <div className="flex h-12 w-12 items-center justify-center text-white sm:shrink-0">
             <picture.svg className="h-20 w-20" aria-hidden="true" />
           </div>
+
           <div className="text-lg text-white">
             <h1 className="text-lg font-bold">{picture.projects}</h1>
+
             <p>{picture.name}</p>
           </div>
         </div>

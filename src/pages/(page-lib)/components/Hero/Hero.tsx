@@ -42,9 +42,11 @@ const Hero: FC = () => (
         <h1 className="p-5 text-xs font-bold uppercase text-slate-500">
           Servicios profesionales de alta calidad
         </h1>
+
         <h1 className="p-5 text-5xl font-bold uppercase text-blue-900">
           ¡Lo que tu hogar necesita a <span className="text-slate-500">solo un click!</span>
         </h1>
+
         <div className="max-w-2xl p-5 text-xl">
           Dejamos que nuestro trabajo de calidad y el compromiso con la satisfacción del cliente sea
           nuestro lema. Llamanos, los profesionales más completos en todo para tu hogar en
@@ -61,8 +63,9 @@ const Hero: FC = () => (
         </div>
 
         <div className="mt-24 hidden p-5 font-bold uppercase md:block">
-          <div className="text-xl text-blue-800">Socios de confianza</div>
-          <div className="py-2 text-3xl text-slate-500">Marcas que confian en nosotros</div>
+          <span className="text-xl text-blue-800">Socios de confianza</span>
+
+          <span className="py-2 text-3xl text-slate-500">Marcas que confian en nosotros</span>
         </div>
       </div>
 
@@ -75,9 +78,11 @@ const Hero: FC = () => (
         />
       </div>
     </div>
-    <div className="mt-20 p-5 text-xl font-bold uppercase text-blue-800 md:hidden">
+
+    <span className="mt-20 p-5 text-xl font-bold uppercase text-blue-800 md:hidden">
       Socios de confianza
-    </div>
+    </span>
+
     <div className="flex items-center justify-around bg-[#E9EBEE] p-5 md:text-left">
       {pictures.map((picture) => (
         <div key={picture.id} className="p-5">
