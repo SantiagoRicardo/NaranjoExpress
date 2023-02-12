@@ -47,12 +47,18 @@ const Navbar: FC = () => {
           </div>
         </div>
 
-        <button
+        <a
+          onClick={(e) => {
+            e.preventDefault();
+            const form = document.getElementById("form");
+            form?.scrollIntoView({ behavior: "smooth" });
+          }}
+          href="#form"
           type="button"
           className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
           Contáctanos
-        </button>
+        </a>
       </div>
     </nav>
   );

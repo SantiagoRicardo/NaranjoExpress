@@ -23,7 +23,7 @@ const FormSection: FC = () => {
   }
 
   return (
-    <section>
+    <section id="form">
       <div className="justify-center md:flex">
         <div className="flex-col px-16 md:justify-center">
           <div className="justify-around">
