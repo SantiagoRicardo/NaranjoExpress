@@ -18,15 +18,6 @@ const Navbar: FC = () => {
           >
             Naranjo <span className="text-yellow-500">Express</span>
           </Link>
-          <button
-            className="block cursor-pointer rounded border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none outline-none focus:outline-none lg:hidden"
-            type="button"
-            onClick={() => {
-              setNavbarOpen(!navbarOpen);
-            }}
-          >
-            <Bars3Icon className="h-6 w-6" />
-          </button>
 
           <div className={cs("border-l-2 pl-4", navbarOpen ? "absolute" : "hidden lg:flex")}>
             <ul className="flex list-none flex-col gap-4 font-medium lg:ml-auto lg:flex-row">
@@ -47,18 +38,28 @@ const Navbar: FC = () => {
           </div>
         </div>
 
-        <a
-          onClick={(e) => {
-            e.preventDefault();
-            const form = document.getElementById("form");
-            form?.scrollIntoView({ behavior: "smooth" });
-          }}
-          href="#form"
-          type="button"
-          className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-        >
-          Contáctanos
-        </a>
+        <div className="flex items-center gap-2">
+          <button
+            className="block cursor-pointer rounded border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none outline-none focus:outline-none lg:hidden"
+            type="button"
+            onClick={() => {
+              setNavbarOpen(!navbarOpen);
+            }}
+          >
+            <Bars3Icon className="h-6 w-6" />
+          </button>
+
+          <button
+            onClick={() => {
+              const form = document.getElementById("form");
+              form?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            }}
+            type="button"
+            className="hidden rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 md:inline"
+          >
+            Contáctanos
+          </button>
+        </div>
       </div>
     </nav>
   );

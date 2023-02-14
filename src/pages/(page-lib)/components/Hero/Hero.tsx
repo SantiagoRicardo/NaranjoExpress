@@ -37,17 +37,17 @@ const pictures: Picture[] = [
 
 const Hero: FC = () => (
   <section className="relative">
-    <div className="mx-20 justify-center md:flex">
-      <div className="pt-10">
-        <h1 className="p-5 text-xs font-bold uppercase text-slate-500">
+    <div className="justify-center md:flex lg:mx-20">
+      <div className="mt-10">
+        <h1 className="text-center text-xs font-bold uppercase text-slate-500 md:ml-5 md:text-left">
           Servicios profesionales de alta calidad
         </h1>
 
-        <h1 className="p-5 text-5xl font-bold uppercase text-blue-900">
+        <h1 className="p-5 text-center text-2xl font-bold uppercase text-blue-900 md:text-left lg:text-5xl">
           ¡Lo que tu hogar necesita a <span className="text-slate-500">solo un click!</span>
         </h1>
 
-        <div className="max-w-2xl p-5 text-xl">
+        <div className="max-w-2xl p-5 lg:text-xl">
           Dejamos que nuestro trabajo de calidad y el compromiso con la satisfacción del cliente sea
           nuestro lema. Llamanos, los profesionales más completos en todo para tu hogar en
           reparaciones o mantenimientos con Naranjo Express
