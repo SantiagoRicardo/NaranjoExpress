@@ -19,22 +19,26 @@ const pictures: Picture[] = [
     alt: "Picture of the author",
   },
   {
-    id: " picture-3",
-    src: "/Grupo Empresarial Del Sinu.jpeg",
+    id: "picture-3",
+    src: "/Red Empresarial Del Sinu.png",
     alt: "Picture of the author",
   },
   {
-    id: " picture-4",
+    id: "picture-4",
     src: "/Constructivamente.png",
     alt: "Picture of the author",
   },
   {
-    id: " picture-5",
+    id: "picture-5",
     src: "/Certicar.png",
     alt: "Picture of the author",
   },
+  {
+    id: "picture-6",
+    src: "/Star Gold Group.png",
+    alt: "Picture of the author",
+  },
 ];
-
 const Hero: FC = () => (
   <section className="relative">
     <div className="justify-center md:flex lg:mx-20">
