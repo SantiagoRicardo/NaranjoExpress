@@ -1,5 +1,5 @@
 import { createTRPCRouter } from "./trpc";
-import { formRouter } from "./routers/form";
+import formRouter from "./routers/form/formRouter";
 
 /**
  * This is the primary router for your server.

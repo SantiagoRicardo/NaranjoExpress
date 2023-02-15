@@ -1,12 +1,12 @@
-import { type FC } from "react";
+import { type FC, useState } from "react";
 import { FaEnvelope, FaMap, FaPhone } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema, type FormSchema } from "@/server/api/routers/form/schemas";
-import { api } from "@/utils/api";
 import cs from "@/utils/cs";
-import { CheckIcon } from "@heroicons/react/24/solid";
 import Form from "@/components/Form";
+import { CheckIcon } from "@heroicons/react/24/solid";
+import { env } from "@/env.mjs";
 
 const contactLinks = [
   {
@@ -27,7 +27,8 @@ const contactLinks = [
 ] as const;
 
 const FormSection: FC = () => {
-  const submitForm = api.form.submit.useMutation();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
@@ -35,8 +36,31 @@ const FormSection: FC = () => {
     reValidateMode: "onChange",
   });
 
-  function handleSubmit(data: FormSchema): void {
-    submitForm.mutate(data);
+  async function handleSubmit(data: FormSchema) {
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch(`https://formsubmit.co/${env.NEXT_PUBLIC_CLIENT_EMAIL}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...data,
+          _captcha: false,
+        }),
+      });
+
+      if (res.status === 200) {
+        setIsSuccess(true);
+        form.reset();
+      }
+    } catch (error) {
+      console.error(error);
+    }
+
+    setIsSubmitting(false);
   }
 
   return (
@@ -99,16 +123,16 @@ const FormSection: FC = () => {
             type="submit"
             className={cs(
               "mt-8 mt-auto self-end rounded-md px-6 py-3 text-sm font-medium text-white shadow-sm transition delay-150 duration-300 ease-in-out",
-              submitForm.isLoading && "cursor-not-allowed opacity-50",
-              submitForm.isSuccess
+              isSubmitting && "cursor-not-allowed opacity-50",
+              isSuccess
                 ? "cursor-not-allowed bg-green-500"
                 : "bg-blue-500 hover:-translate-y-1 hover:scale-105 hover:bg-blue-400 active:scale-95 active:bg-blue-600"
             )}
-            disabled={submitForm.isLoading || submitForm.isSuccess}
+            disabled={isSubmitting || isSuccess}
           >
-            {submitForm.isLoading ? (
+            {isSubmitting ? (
               "Enviando..."
-            ) : submitForm.isSuccess ? (
+            ) : isSuccess ? (
               <span className="flex items-center gap-2">
                 Enviado
                 <CheckIcon className="h-5 w-5" />
