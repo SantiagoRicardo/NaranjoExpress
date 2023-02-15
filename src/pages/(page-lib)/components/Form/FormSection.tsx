@@ -36,7 +36,7 @@ const FormSection: FC = () => {
     reValidateMode: "onChange",
   });
 
-  async function handleSubmit(data: FormSchema) {
+  async function handleSubmit(data: FormSchema): Promise<void> {
     setIsSubmitting(true);
 
     try {
