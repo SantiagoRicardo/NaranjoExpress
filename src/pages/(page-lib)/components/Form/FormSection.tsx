@@ -1,5 +1,5 @@
 import { type FC, useState } from "react";
-import { FaEnvelope, FaMap, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaMap, FaPhone } from "react-icons/fa";  
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema, type FormSchema } from "@/server/api/routers/form/schemas";
@@ -122,7 +122,7 @@ const FormSection: FC = () => {
           <button
             type="submit"
             className={cs(
-              "mt-8 mt-auto self-end rounded-md px-6 py-3 text-sm font-medium text-white shadow-sm transition delay-150 duration-300 ease-in-out",
+              "mt-8 self-end rounded-md px-6 py-3 text-sm font-medium text-white shadow-sm transition delay-150 duration-300 ease-in-out",
               isSubmitting && "cursor-not-allowed opacity-50",
               isSuccess
                 ? "cursor-not-allowed bg-green-500"

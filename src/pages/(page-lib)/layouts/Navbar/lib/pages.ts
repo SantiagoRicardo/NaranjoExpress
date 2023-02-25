@@ -18,7 +18,7 @@ const PAGES: Page[] = [
   },
   {
     name: "Portafolio",
-    href: "/portafolio"
+    href: "https://drive.google.com/file/d/1DU1KMIuyDcVh6pf1gWAkx0P_TCWKF10U/view?usp=sharing"
   },
   {
     name: "Contacto",
