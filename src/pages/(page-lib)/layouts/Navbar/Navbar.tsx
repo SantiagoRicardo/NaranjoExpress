@@ -5,6 +5,7 @@ import { PAGES } from "./lib";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import dynamic from "next/dynamic";
 import { Transition } from "@headlessui/react";
+import { scrollIntoViewWithOffset } from "@/utils/dom";
 
 const Navbar: FC = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -54,7 +55,9 @@ const Navbar: FC = () => {
             <button
               onClick={() => {
                 const form = document.getElementById("form");
-                form?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+                if (form === null) return;
+
+                scrollIntoViewWithOffset(form, 150);
               }}
               type="button"
               className="hidden rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 md:inline"
