@@ -9,6 +9,7 @@ import {
 } from "@heroicons/react/24/solid";
 
 type Card = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   svg: any;
   description: string;
   id: string;
