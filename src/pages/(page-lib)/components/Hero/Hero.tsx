@@ -1,5 +1,6 @@
 import { type FC } from "react";
 import Image from "next/image";
+import { scrollIntoViewWithOffset } from "@/utils/dom";
 
 type Picture = {
   src: string;
@@ -40,7 +41,7 @@ const pictures: Picture[] = [
   },
 ];
 const Hero: FC = () => (
-  <section className="relative">
+  <section id="home" className="relative">
     <div className="justify-center md:flex lg:mx-20">
       <div className="mt-10">
         <h1 className="text-center text-xs font-bold uppercase text-slate-500 md:ml-5 md:text-left">
@@ -59,6 +60,14 @@ const Hero: FC = () => (
 
         <div className="px-5 py-6">
           <button
+
+          onClick={()=>{
+            const form = document.getElementById("form");
+            if (form === null) return;
+
+            scrollIntoViewWithOffset(form, 150);
+          }}
+  
             type="button"
             className="rounded-md bg-blue-600 px-7 py-3 text-sm font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
@@ -87,9 +96,9 @@ const Hero: FC = () => (
       Socios de confianza
     </span>
 
-    <div className="flex items-center justify-around bg-[#E9EBEE] p-5 md:text-left">
+    <div className="justify-center bg-[#E9EBEE] p-5 md:flex md:items-center md:justify-around md:text-left">
       {pictures.map((picture) => (
-        <div key={picture.id} className="p-5">
+        <div key={picture.id} className="m-5">
           <Image src={picture.src} alt={picture.alt} width={120} height={80} />
         </div>
       ))}

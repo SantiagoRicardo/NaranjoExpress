@@ -51,11 +51,11 @@ const equipment: Equipment[] = [
 ];
 
 const Equipment: FC = () => (
-  <section className="relative">
+  <section id="equipments" className="relative">
     <div className="justify-center md:flex lg:mx-20">
       <div className="mt-10">
-        <div className="sm:text-center">
-          <h2 className="text-lg font-semibold leading-8 text-[#02044a]">Herramientas</h2>
+        <div className="text-center">
+          <h2 className="text-center text-lg font-semibold leading-8 text-[#02044a]">Herramientas</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             ¡Equipamiento y Mas Servicios!
           </p>
@@ -63,7 +63,7 @@ const Equipment: FC = () => (
             ¡Conoces las diferentes herramientas que utilizamos y más servicios!
           </p>
 
-          <div className="m-5 grid grid-cols-2">
+          <div className="m-5 md:grid md:grid-cols-2">
             {equipment.map((equipment) => (
               <div key={equipment.id} className="m-5">
                 <Image src={equipment.src} alt={equipment.alt} width={700} height={700} />

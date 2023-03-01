@@ -34,9 +34,26 @@ const Navbar: FC = () => {
                     )}
                     key={page.name}
                   >
-                    <Link href={page.href}>{page.name}</Link>
+                    <button
+                      onClick={() => {
+                        const scroll = document.getElementById(page.href);
+                        if (scroll === null) return;
+
+                        scrollIntoViewWithOffset(scroll, 150);
+                      }}
+                      type="button"
+                    >
+                      {page.name}
+                    </button>
                   </li>
                 ))}
+                <Link
+                  className="ml-2 text-neutral-500 hover:text-neutral-800"
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1DU1KMIuyDcVh6pf1gWAkx0P_TCWKF10U/view?usp=sharing"
+                >
+                  Portafolio
+                </Link>
               </ul>
             </div>
           </div>
@@ -88,9 +105,26 @@ const Navbar: FC = () => {
                   )}
                   key={page.name}
                 >
-                  <Link href={page.href}>{page.name}</Link>
+                  <button
+                      onClick={() => {
+                        const scroll = document.getElementById(page.href);
+                        if (scroll === null) return;
+
+                        scrollIntoViewWithOffset(scroll, 150);
+                      }}
+                      type="button"
+                    >
+                      {page.name}
+                    </button>
                 </li>
               ))}
+              <Link
+                className="text-neutral-500 hover:text-neutral-800"
+                target="_blank"
+                href="https://drive.google.com/file/d/1DU1KMIuyDcVh6pf1gWAkx0P_TCWKF10U/view?usp=sharing"
+              >
+                Portafolio
+              </Link>
             </ul>
           </div>
         </Transition>

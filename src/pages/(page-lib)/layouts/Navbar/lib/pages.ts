@@ -1,28 +1,24 @@
-type Page = {
-  name: string;
-  href: string;
-}
 
-const PAGES: Page[] = [
+const PAGES = [
   {
     name: "Inicio",
-    href: "/"
+    href: "home"
+  },
+  {
+    name: "Nosotros",
+    href: "us"
   },
   {
     name: "Servicios",
-    href: "/servicios"
+    href: "services"
   },
   {
-    name: "Experiencia",
-    href: "/experiencia"
-  },
-  {
-    name: "Portafolio",
-    href: "https://drive.google.com/file/d/1DU1KMIuyDcVh6pf1gWAkx0P_TCWKF10U/view?usp=sharing"
+    name: "Equipos",
+    href: "equipments"
   },
   {
     name: "Contacto",
-    href: "/contacto"
+    href: "form"
   }
 ];
 

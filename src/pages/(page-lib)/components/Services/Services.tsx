@@ -60,7 +60,7 @@ const CARDS: Card[] = [
 ];
 
 const Services: FC = () => (
-  <section className="bg-white py-24 sm:py-32 lg:py-20">
+  <section id="services" className="bg-white py-24 sm:py-32 lg:py-20">
     <div className="mx-auto max-w-7xl px-6 lg:px-8">
       <div className="sm:text-center">
         <h2 className="text-lg font-semibold leading-8 text-[#02044a]">¿Como funciona?</h2>

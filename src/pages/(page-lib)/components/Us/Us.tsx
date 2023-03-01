@@ -7,6 +7,7 @@ import {
   UserGroupIcon,
   UsersIcon,
 } from "@heroicons/react/24/solid";
+import { scrollIntoViewWithOffset } from "@/utils/dom";
 
 type Picture = {
   svg: any;
@@ -61,8 +62,8 @@ const pictures: Picture[] = [
 ];
 
 const Nosotros: FC = () => (
-  <section>
-    <div className="mx-20 justify-center gap-x-10 md:flex">
+  <section id="us">
+    <div className="justify-center gap-x-10 md:mx-20 md:flex">
       <div className="pt-10">
         <div className="px-5 py-3">
           <h1 className="text-xs font-bold uppercase text-slate-500">Sobre nosotros y servicios</h1>
@@ -77,7 +78,14 @@ const Nosotros: FC = () => (
             hogar que le ahorra tiempo y dinero.
           </div>
           <div className="py-10">
+
             <button
+              onClick={() => {
+                const form = document.getElementById("form");
+                if (form === null) return;
+
+                scrollIntoViewWithOffset(form, 150);
+              }}
               type="button"
               className="rounded-md bg-blue-600 px-7 py-3 text-sm font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >

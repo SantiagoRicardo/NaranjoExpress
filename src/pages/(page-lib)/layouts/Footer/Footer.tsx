@@ -1,3 +1,5 @@
+import { scrollIntoViewWithOffset } from "@/utils/dom";
+import Link from "next/link";
 import { type FC } from "react";
 import { FaInstagram, FaFacebookF, FaWhatsapp, FaGithub } from "react-icons/fa";
 
@@ -40,6 +42,29 @@ const Services: Services[] = [
     services: "Suministro eléctrico",
   },
 ];
+
+const LINKS = [
+  {
+    name: "Inicio",
+    href: "home"
+  },
+  {
+    name: "Nosotros",
+    href: "us"
+  },
+  {
+    name: "Servicios",
+    href: "services"
+  },
+  {
+    name: "Equipos",
+    href: "equipments"
+  },
+  {
+    name: " Contáctanos",
+    href: "form"  
+  }
+]
 
 const Footer: FC = () => (
   <section>
@@ -129,21 +154,28 @@ const Footer: FC = () => (
             <h1 className="text-lg font-bold text-white">Enlaces utiles</h1>
             <div className="mt-3 text-base text-slate-500">
               <ol>
-                <a href="@/pages/(page-lib)/layouts/Footer/index">
-                  <li className="mb-4 hover:text-white">Inicio</li>
-                </a>
-                <a href="@/pages/(page-lib)/layouts/Footer/index">
-                  <li className="mb-4 hover:text-white">Sobre nosotros</li>
-                </a>
-                <a href="@/pages/(page-lib)/layouts/Footer/index">
-                  <li className="mb-4 hover:text-white">Servicios</li>
-                </a>
-                <a href="@/pages/(page-lib)/layouts/Footer/index">
-                  <li className="mb-4 hover:text-white">Portafolio</li>
-                </a>
-                <a href="@/pages/(page-lib)/layouts/Footer/index">
-                  <li className="mb-4 hover:text-white">Contáctanos</li>
-                </a>
+              {LINKS.map((links) => (
+                  <li key={links.name} className="mb-4 hover:text-white">
+                  <button
+                      onClick={() => {
+                        const scroll = document.getElementById(links.href);
+                        if (scroll === null) return;
+
+                        scrollIntoViewWithOffset(scroll, 150);
+                      }}
+                      type="button"
+                    >
+                      {links.name}
+                    </button>
+                  </li>
+                ))}
+                <Link
+                  className="text-slate-500 hover:text-white"
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1DU1KMIuyDcVh6pf1gWAkx0P_TCWKF10U/view?usp=sharing"
+                >
+                  Portafolio
+                </Link>
               </ol>
             </div>
           </div>
