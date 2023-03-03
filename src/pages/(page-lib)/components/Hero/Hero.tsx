@@ -74,7 +74,7 @@ const Hero: FC = () => (
         </div>
 
         <div className="mt-24 hidden p-5 font-bold uppercase md:block">
-          <span className="text-xl text-blue-800">Socios de confianza</span>
+          <span className="text-xl text-blue-800 md:block">Socios de confianza</span>
 
           <span className="py-2 text-3xl text-slate-500">Marcas que confian en nosotros</span>
         </div>

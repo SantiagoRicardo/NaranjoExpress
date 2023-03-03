@@ -162,18 +162,19 @@ const Nosotros: FC = () => (
       </div>
     </div>
 
-    <div className="m-10 w-auto items-center justify-around rounded-md bg-[#02044a] px-14 sm:min-w-0 md:flex">
+    <div className="m-10 grid w-auto grid-cols-2 items-center justify-center rounded-md bg-[#02044a] p-5 px-14 sm:min-w-0 md:flex md:flex-row md:justify-around">
       {pictures.map((picture) => (
-        <div key={picture.id} className="my-5 justify-around md:flex">
+
+        <div key={picture.id} className="my-5 justify-around gap-4 md:flex">
           <div className="flex h-12 w-12 items-center justify-center text-white sm:shrink-0">
             <picture.svg className="h-20 w-20" aria-hidden="true" />
           </div>
 
           <div className="text-lg text-white">
             <h1 className="text-lg font-bold">{picture.projects}</h1>
-
             <p>{picture.name}</p>
           </div>
+
         </div>
       ))}
     </div>
