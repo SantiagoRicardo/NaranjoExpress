@@ -106,16 +106,17 @@ const Navbar: FC = () => {
                   key={page.name}
                 >
                   <button
-                      onClick={() => {
-                        const scroll = document.getElementById(page.href);
-                        if (scroll === null) return;
+                    onClick={() => {
+                      const scroll = document.getElementById(page.href);
+                      if (scroll === null) return;
 
-                        scrollIntoViewWithOffset(scroll, 150);
-                      }}
-                      type="button"
-                    >
-                      {page.name}
-                    </button>
+                      scrollIntoViewWithOffset(scroll, 150);
+                      setIsNavbarOpen(false);
+                    }}
+                    type="button"
+                  >
+                    {page.name}
+                  </button>
                 </li>
               ))}
               <Link

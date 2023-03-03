@@ -60,14 +60,12 @@ const Hero: FC = () => (
 
         <div className="px-5 py-6">
           <button
+            onClick={() => {
+              const form = document.getElementById("form");
+              if (form === null) return;
 
-          onClick={()=>{
-            const form = document.getElementById("form");
-            if (form === null) return;
-
-            scrollIntoViewWithOffset(form, 150);
-          }}
-  
+              scrollIntoViewWithOffset(form, 150);
+            }}
             type="button"
             className="rounded-md bg-blue-600 px-7 py-3 text-sm font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
@@ -96,9 +94,9 @@ const Hero: FC = () => (
       Socios de confianza
     </span>
 
-    <div className="justify-center bg-[#E9EBEE] p-5 md:flex md:items-center md:justify-around md:text-left">
+    <div className="grid grid-cols-2 items-center justify-center gap-2 bg-[#E9EBEE] p-5 md:flex md:flex-row md:justify-around md:text-left lg:px-12">
       {pictures.map((picture) => (
-        <div key={picture.id} className="m-5">
+        <div key={picture.id}>
           <Image src={picture.src} alt={picture.alt} width={120} height={80} />
         </div>
       ))}

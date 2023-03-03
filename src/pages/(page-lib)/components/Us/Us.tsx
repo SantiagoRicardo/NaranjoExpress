@@ -78,7 +78,6 @@ const Nosotros: FC = () => (
             hogar que le ahorra tiempo y dinero.
           </div>
           <div className="py-10">
-
             <button
               onClick={() => {
                 const form = document.getElementById("form");
